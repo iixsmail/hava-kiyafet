@@ -34,4 +34,4 @@ export const GERI_BILDIRIM_EPOSTA = "ismailguleser@gmail.com";
  * sırasında biri unutulmasın.
  */
 export const UYGULAMA_SURUMU = "1.0.0";
-export const UYGULAMA_SURUM_KODU = 29;
+export const UYGULAMA_SURUM_KODU = 30;
