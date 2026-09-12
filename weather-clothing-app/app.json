@@ -1,0 +1,99 @@
+{
+  "expo": {
+    "name": "Hava ve Kıyafet",
+    "slug": "hava-kiyafet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "backgroundColor": "#16233B"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "newArchEnabled": true,
+    "android": {
+      "package": "com.ismail.havakiyafet",
+      "versionCode": 29,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "VIBRATE",
+        "POST_NOTIFICATIONS",
+        "RECEIVE_BOOT_COMPLETED"
+      ],
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#16233B"
+      }
+    },
+    "plugins": [
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-2234260593125912~7064265042"
+        }
+      ],
+      "expo-iap",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Gardırobuna eklemek istediğin kıyafetlerin fotoğrafını çekebilmek için kamerayı kullanıyoruz.",
+          "photosPermission": "Gardırobuna kıyafet eklemek için galerinden fotoğraf seçmene izin veriyoruz."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#3B82F6",
+          "defaultChannel": "sabah-ozeti",
+          "icon": "./assets/notification-icon.png"
+        }
+      ],
+      "./plugins/withReleaseSigning.js",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0",
+            "minSdkVersion": 24,
+            "kotlinVersion": "2.2.20"
+          }
+        }
+      ],
+      "expo-sqlite",
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "Hava",
+              "label": "Hava & Kıyafet",
+              "minWidth": "180dp",
+              "minHeight": "110dp",
+              "description": "Bugünün havası ve ne giyeceğin",
+              "previewImage": "./assets/notification-icon.png",
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000
+            }
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4595a818-bcbc-4d1b-8e27-9bca8b8f482b"
+      }
+    }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-2234260593125912~7064265042"
+  }
+}

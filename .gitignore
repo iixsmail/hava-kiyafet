@@ -1,0 +1,33 @@
+# Bagimliliklar ve uretilen native projeler
+node_modules/
+android/
+ios/
+.expo/
+dist/
+build/
+.gradle/
+
+# Derleme ciktilari (buyuk ikili dosyalar)
+cikti/
+*.aab
+*.apk
+*.hbc
+
+# SIRLAR - asla depoya girmemeli
+credentials/
+*.jks
+*.keystore
+keystore.properties
+.env
+.env.*
+*.env
+*.db
+
+# Isletim sistemi
+.DS_Store
+._*
+Thumbs.db
+
+# Adi .env ile BASLAYAN her sey (kazara olusmus dosyalar dahil)
+.env*
+**/.env*

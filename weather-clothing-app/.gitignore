@@ -1,0 +1,27 @@
+# Bağımlılıklar
+node_modules/
+
+# Expo / native çıktıları — prebuild yeniden üretir
+.expo/
+android/
+ios/
+dist/
+web-build/
+
+# İMZALAMA ANAHTARI VE ŞİFRELERİ — asla git'e girmemeli
+credentials/
+*.jks
+*.keystore
+
+# Ortam değişkenleri
+.env
+.env.local
+
+# İşletim sistemi
+.DS_Store
+Thumbs.db
+
+# Loglar
+npm-debug.log*
+yarn-error.log*
+dist/

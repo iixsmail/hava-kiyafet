@@ -1,0 +1,4 @@
+node_modules/
+.env
+krediler.db
+*.db

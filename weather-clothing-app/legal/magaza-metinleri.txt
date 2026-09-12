@@ -1,0 +1,232 @@
+====================================================
+PLAY CONSOLE — MAĞAZA GİRİŞİ METİNLERİ (kopyala-yapıştır)
+====================================================
+
+!!! ÖNEMLİ — İKİ AYRI METİN VAR, KARIŞTIRMA !!!
+
+  v1.0 METNİ  -> YARIN yayınlanacak sürüm için. Gardırop ve yapay zeka
+                 özellikleri bu sürümde KAPALI (src/config.js içinde
+                 SUNUCU_URL = ""). Uygulamada olmayan özelliği mağaza
+                 metninde vaat etmek YANLIŞ BEYAN'dır ve Play'in en sık
+                 ret sebeplerinden biridir.
+
+  v1.1 METNİ  -> Sunucu dağıtılıp SUNUCU_URL doldurulduktan SONRA
+                 geçilecek metin. Şimdiden yapıştırma.
+
+Fiyatlandırma (her iki sürümde de aynı):
+  Aylık  99,99 TL
+  Yıllık 359,99 TL   -> ayda 30,00 TL'ye denk gelir, %70 avantaj
+  (%70, 99,99 x 12 = 1.199,88 TL ile 359,99 TL karşılaştırmasından gelir.
+   Uygulama bu oranı Play'deki gerçek fiyatlardan kendisi hesaplıyor;
+   Console'da fiyatı değiştirirsen buradaki metni de güncelle.)
+
+
+####################################################
+#  v1.0 METNİ — YARIN YAYINLANACAK SÜRÜM
+####################################################
+
+--- UYGULAMA ADI (max 30) ---
+Hava ve Kıyafet
+
+
+--- KISA AÇIKLAMA (max 80) ---
+Detaylı hava durumu ve o güne uygun kıyafet önerisi. Sabah bildirimiyle.
+
+
+--- TAM AÇIKLAMA (max 4000) ---
+----------------- BURADAN KOPYALA -----------------
+Sabah kapıdan çıkmadan önce "mont alsam mı, şemsiye lazım mı?" diye
+düşünmeyi bırak. Hava ve Kıyafet, bulunduğun konumun havasına bakıp o gün
+ne giymen gerektiğini net ve anlaşılır şekilde söyler.
+
+NE YAPAR?
+Sadece sıcaklığı göstermekle kalmaz; hissedilen sıcaklık, çiy noktası,
+rüzgar, basınç ve yağış ihtimalini birlikte değerlendirip somut öneriler
+üretir. "Hafif yağmur geçişi var, şemsiyeni al" ya da "Rüzgarlı, ince bir
+rüzgarlık işine yarar" gibi doğrudan uygulanabilir tavsiyeler alırsın.
+
+DETAYLI HAVA KARTLARI
+Her ölçüm kendi kartında, altında ne anlama geldiğiyle birlikte:
+• Yağış — ihtimal ve milimetre cinsinden miktar
+• Rüzgar — hız, yön ve yön oku ("KD yönünden sert")
+• UV indeksi — koruma tavsiyesiyle
+• Nem — çiy noktası hesabıyla gerçek konfor yorumu
+• Basınç — deniz seviyesine indirgenmiş, rakımdan bağımsız
+• Görüş mesafesi
+• Gün doğumu ve gün batımı — kalan gün ışığı süresiyle
+
+AKILLI BİLDİRİMLER
+• Sabah özeti: her sabah günün havası ve kıyafet önerisi (saati sen seç)
+• Yağış uyarısı: yağmurdan 45 dakika önce haber verir
+• Ani soğuma uyarısı: 6 derece ve üzeri düşüşten bir saat önce
+
+Bildirimler tamamen cihazında üretilir; internet bağlantısı gerekmez.
+
+DİĞER ÖZELLİKLER
+• Saatlik ve 10 günlük tahmin — yatay kaydırmalı kartlar
+• Havaya ve saate göre değişen dinamik tema
+• Çevrimdışı çalışma: bağlantı yokken son veriyi gösterir
+• Şehir arama — birden fazla eşleşmede hangisini istediğini sorar
+• Sade, hızlı ve reklamı rahatsız etmeyen arayüz
+
+PREMIUM
+• Aylık 99,99 TL
+• Yıllık 359,99 TL — ayda 30 TL'ye denk gelir, %70 avantaj
+
+Premium ile açılanlar:
+• Reklamsız kullanım
+• 10 günlük detaylı tahminin tamamı (ücretsiz planda 2 gün)
+• Tüm kıyafet önerileri (ücretsiz planda ilk 3)
+• Nem ve UV bazlı ekstra tavsiyeler
+
+Abonelik seçtiğin dönemde otomatik yenilenir. Google Play > Abonelikler
+bölümünden istediğin zaman iptal edebilirsin; iptal ettiğinde mevcut
+dönemin sonuna kadar Premium açık kalır.
+
+KİMLER İÇİN?
+Her sabah ne giyeceğine karar vermekte zorlananlar, çocuğunu okula
+hazırlayan ebeveynler, gün içinde dışarıda vakit geçirenler ve hava durumu
+uygulamalarındaki karmaşık grafiklerden sıkılanlar için.
+
+GİZLİLİK
+Konum bilgin yalnızca sana doğru hava durumunu göstermek için kullanılır,
+sunucularımızda saklanmaz. Hava verileri Open-Meteo servisinden alınır.
+------------------ BURAYA KADAR ------------------
+
+
+####################################################
+#  v1.1 METNİ — SUNUCU AÇILDIKTAN SONRA
+####################################################
+
+  ÖN KOŞUL: src/config.js içinde SUNUCU_URL dolu olmalı ve o sürüm
+  yayınlanmış olmalı. Aksi halde aşağıdaki metin olmayan bir özelliği
+  vaat eder.
+
+  Ayrıca v1.1'e geçerken Veri güvenliği formuna "Fotoğraflar" kategorisini
+  eklemeyi ve gizlilik politikasını güncellemeyi unutma
+  (bkz. play-store-listing.txt).
+
+
+--- KISA AÇIKLAMA (max 80) ---
+Dolabındaki kıyafetlerden, havaya uygun günlük kombini yapay zeka seçer.
+
+
+--- TAM AÇIKLAMA (max 4000) ---
+----------------- BURADAN KOPYALA -----------------
+Dolabın dolu ama her sabah aynı soru: "bugün ne giysem?" Hava ve Kıyafet,
+kendi kıyafetlerinin fotoğrafını bir kez tanır ve her gün o günün havasına
+en uygun kombini senin gardırobundan seçer.
+
+NASIL ÇALIŞIR?
+1. Kıyafetlerinin fotoğrafını çek — yapay zeka türünü, kumaşını, rengini
+   ve kaç derecede giyilebileceğini tanır.
+2. Tanıdığı bilgileri sana gösterir, yanlış varsa tek dokunuşla düzeltirsin.
+3. Her gün havaya bakıp gardırobundan kombin önerir ve neden o parçaları
+   seçtiğini açıklar.
+
+Fotoğrafın yalnızca ilk tanıma anında işlenir; günlük öneriler fotoğraf
+değil, çıkarılan metin bilgileri üzerinden üretilir.
+
+GARDIROBUM
+• Üst, dış giyim, alt, ayakkabı ve aksesuar kategorileri
+• Eksik parçalar için nazik yönlendirme ("soğuk hava için kalın bir parça ekle")
+• Fotoğraflar cihazında kalır, istediğin zaman silebilirsin
+
+DETAYLI HAVA KARTLARI
+Her ölçüm kendi kartında, altında ne anlama geldiğiyle birlikte:
+• Yağış — ihtimal ve milimetre cinsinden miktar
+• Rüzgar — hız, yön ve yön oku ("KD yönünden sert")
+• UV indeksi — koruma tavsiyesiyle
+• Nem — çiy noktası hesabıyla gerçek konfor yorumu
+• Basınç — deniz seviyesine indirgenmiş, rakımdan bağımsız
+• Görüş mesafesi
+• Gün doğumu ve gün batımı — kalan gün ışığı süresiyle
+
+AKILLI BİLDİRİMLER
+• Sabah özeti: günün havası ve gardırobundan önerilen kombin (saati sen seç)
+• Yağış uyarısı: yağmurdan 45 dakika önce haber verir
+• Ani soğuma uyarısı: 6 derece ve üzeri düşüşten bir saat önce
+
+DİĞER ÖZELLİKLER
+• Saatlik ve 10 günlük tahmin — yatay kaydırmalı kartlar
+• Havaya ve saate göre değişen dinamik tema
+• Çevrimdışı çalışma: bağlantı yokken son veriyi gösterir
+• Sade, hızlı ve reklamı rahatsız etmeyen arayüz
+
+PREMIUM
+• Aylık 99,99 TL
+• Yıllık 359,99 TL — ayda 30 TL'ye denk gelir, %70 avantaj
+
+Premium ile açılanlar:
+• Günde 20 yapay zeka kombin önerisi (ücretsiz planda günde 1)
+• Ayda 500 kıyafet ekleme (ücretsiz planda ayda 20)
+• Sabah bildiriminde kombin önerisi
+• Yağış ve ani hava değişimi uyarıları
+• Reklamsız kullanım
+• 10 günlük detaylı tahminin tamamı
+• Tüm kıyafet önerileri
+• Nem ve UV bazlı ekstra tavsiyeler
+
+Abonelik seçtiğin dönemde otomatik yenilenir. Google Play > Abonelikler
+bölümünden istediğin zaman iptal edebilirsin; iptal ettiğinde mevcut
+dönemin sonuna kadar Premium açık kalır.
+
+GİZLİLİK
+Kıyafet fotoğrafların cihazında saklanır. Bir parçayı ilk eklediğinde o
+fotoğraf yalnızca bir kez, tanınması için Google Gemini servisine şifreli
+bağlantıyla iletilir; sunucularımızda saklanmaz. Konum bilgin yalnızca
+hava durumu için kullanılır. Ayrıntılar gizlilik politikamızda.
+------------------ BURAYA KADAR ------------------
+
+
+====================================================
+GÖRSELLER — hangisi zorunlu, hangisi değil
+====================================================
+
+ZORUNLU (formda yıldızlı):
+  [✓] Uygulama simgesi 512x512
+      -> store-assets/play-icon-512.png            HAZIR
+  [✓] Özellik grafiği 1024x500
+      -> store-assets/play-feature-1024x500.png    HAZIR
+  [ ] Telefon ekran görüntüsü (2-8 adet)
+      -> store-assets/screenshots-telefon/
+  [ ] 7 inç tablet ekran görüntüsü
+      -> store-assets/screenshots-tablet7/
+  [ ] 10 inç tablet ekran görüntüsü
+      -> store-assets/screenshots-tablet10/
+
+ZORUNLU DEĞİL — ATLA:
+  - Chromebook ekran görüntüleri
+  - Android XR ekran görüntüleri
+  - Video (YouTube URL)
+
+!! MEVCUT EKRAN GÖRÜNTÜLERİ ESKİ ARAYÜZE AİT.
+   store-assets/ içindekiler mikro kartlar, yeni tahmin şeritleri ve
+   yeni paywall eklenmeden önce çekilmişti. Play, ekran görüntülerinin
+   uygulamayı doğru yansıtmasını istiyor — yayın öncesi yenilerini çek.
+
+Ekran görüntülerini üretmek için: telefondan aldığın PNG'leri
+tools/ham-ekran-goruntuleri/ klasörüne at, sonra:
+
+    pwsh -File tools/play-gorseller.ps1
+
+NOT: tools/*.ps1 script'leri .NET System.Drawing kullanıyor ve YALNIZCA
+WINDOWS'ta çalışır. Mac'te sips veya ImageMagick ile aynı işi yapabilirsin.
+
+Kurallar:
+- Telefon/7 inç: her kenar 320-3840, oran 16:9 ile 9:16 arası
+- 10 inç: her kenar 1080-7680
+- Modern telefonlar 20:9 (~0.46) çekiyor -> Play bunu reddeder, kenarlara
+  bant ekleyip 0.5625'e getirmek gerekiyor (kırpma değil, bant)
+- Tanıtımlarda öne çıkabilmek için en az 4 ekran görüntüsü ve her kenarın
+  minimum 1080 piksel olması isteniyor
+
+ÖNERİLEN EKRANLAR (4-6 adet):
+  1. Ana ekran — büyük derece + mikro kartlar birlikte görünsün
+  2. Mikro kartların tamamı (UV, nem/çiy, basınç, görüş, gün doğumu)
+  3. Saatlik + 10 günlük yatay şeritler
+  4. Kıyafet öneri kartı
+  5. Bildirim ayarları ekranı
+  6. Premium ekranı — iki planlı seçici ve karşılaştırma tablosu
+
+Reklam banner'ının boş göründüğü kareleri kullanma — bozuk izlenimi verir.

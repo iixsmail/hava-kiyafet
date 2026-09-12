@@ -1,0 +1,108 @@
+====================================================
+PLAY CONSOLE - MAĞAZA LİSTESİ METİNLERİ (kopyala-yapıştır)
+====================================================
+
+--- Uygulama adı, kısa açıklama ve tam açıklama ---
+
+  !! BU DOSYADA ARTIK AÇIKLAMA METNİ TUTULMUYOR.
+
+  Tek kaynak: legal/magaza-metinleri.txt
+
+  Sebep: metin iki dosyada birden durunca biri güncellenip diğeri
+  unutuluyordu ve mağazada eski fiyat kalma riski doğuyordu. Play,
+  açıklama ile gerçek fiyatın tutarlı olmasını şart koşuyor.
+
+  magaza-metinleri.txt içinde İKİ ayrı sürüm var:
+    - v1.0 metni (yarın yayınlanacak, yapay zeka KAPALI)
+    - v1.1 metni (sunucu açıldıktan sonra)
+
+--- Fiyatlandırma (özet) ---
+  Aylık  99,99 TL
+  Yıllık 359,99 TL  -> ayda 30,00 TL, %70 avantaj
+
+  Play Console'da 'premium_yillik' ürününün altında İKİ base plan
+  tanımlı olmalı (aylık + yıllık). Uygulama ikisini de otomatik okuyup
+  plan kartlarına dönüştürüyor ve %70 oranını kendisi hesaplıyor.
+
+--- Kategori önerisi ---
+Hava Durumu (Weather)
+
+--- İletişim e-postası (Play Console zorunlu alan) ---
+ismailguleser@gmail.com
+
+====================================================
+GİZLİLİK POLİTİKASI URL'İ
+====================================================
+legal/privacy-policy.html dosyasını ücretsiz bir yerde barındırıp
+(GitHub Pages, Google Sites, Netlify Drop vb.) çıkan URL'i Play Console
+> App content > Privacy policy alanına yapıştır.
+
+En hızlı yol - GitHub Pages:
+1. github.com'da yeni bir repo oluştur (public), örn: "hava-kiyafet-legal"
+2. privacy-policy.html dosyasını repoya yükle
+3. Repo > Settings > Pages > Branch: main, klasör: / (root) -> Save
+4. Birkaç dakika sonra şu adreste yayınlanır:
+   https://KULLANICI_ADIN.github.io/hava-kiyafet-legal/privacy-policy.html
+
+====================================================
+DATA SAFETY (VERİ GÜVENLİĞİ) FORMU - Play Console'da doldurman gerekiyor
+====================================================
+Play Console > App content > Data safety bölümünde soracağı sorulara
+kabaca şu cevapları vereceksin (gerçek AdMob/IAP kurulumuna göre form
+kendi arayüzünde küçük farklılıklar gösterebilir):
+
+Konum (Location - approximate/precise):
+  - Toplanıyor mu? Evet
+  - Amaç: Uygulama işlevselliği (App functionality)
+  - Kullanıcıyla paylaşılıyor mu? Hayır (sadece hava API'sine koordinat
+    olarak gönderilir, kişisel veri olarak paylaşılmaz)
+  - Cihazda mı işleniyor, geçici mi? Evet, saklanmıyor
+
+Fotoğraflar (Photos and videos - Photos):   <-- v1.1 İLE EKLENDİ
+  - Toplanıyor mu? EVET (gardırop özelliği)
+  - Amaç: Uygulama işlevselliği (App functionality)
+  - Üçüncü tarafla paylaşılıyor mu? EVET — parça eklerken fotoğraf bir kez
+    Google Gemini API'sine tanıma amacıyla aktarılıyor
+  - DİKKAT: Gemini ücretsiz katmanında Google, gönderilen içeriği kendi
+    hizmetlerini geliştirmek için kullanabiliyor. Play formunda "Data is
+    used for..." kısmında bunu gizlemeye çalışma; gizlilik politikasında
+    açıkça yazıyor ve form ile politika birbiriyle TUTARLI olmak zorunda.
+    Bu maddeyi ortadan kaldırmak istiyorsan Gemini'nin ücretli katmanına
+    geçmen gerekir.
+  - Zorunlu mu? HAYIR, isteğe bağlı (kullanıcı gardırop özelliğini hiç
+    kullanmayabilir) -> "Users can choose whether this data is collected"
+    kutusunu işaretle
+  - Şifreleniyor mu? Evet (HTTPS)
+  - Silinebiliyor mu? Evet, kullanıcı parçaya basılı tutup silebiliyor
+
+  NOT: Play, CAMERA izni için ayrıca bir gerekçe soruyor. Cevap:
+  "Kullanıcıların kendi kıyafetlerinin fotoğrafını çekerek gardırop
+  oluşturması ve hava durumuna uygun kombin önerisi alması için."
+
+Reklam kimliği / Cihaz kimlikleri (Device or other IDs):
+  - Toplanıyor mu? Evet (AdMob + yapay zeka kredi sayacı)
+  - Amaç: Reklam ve pazarlama (Advertising or marketing) + Uygulama
+    işlevselliği (kredi sayacı için üretilen rastgele cihaz kimliği)
+  - Üçüncü tarafla paylaşılıyor mu? Evet (Google AdMob)
+
+Satın alma geçmişi (Purchase history):
+  - Toplanıyor mu? Evet
+  - Amaç: Uygulama işlevselliği (abonelik durumu doğrulama)
+  - Üçüncü tarafla paylaşılıyor mu? Evet (Google Play Billing)
+
+Veri şifreleme: "Veriler aktarım sırasında şifrelenir" -> Evet
+Veri silme talebi: Kullanıcı uygulamayı kaldırarak veya konum iznini
+kapatarak veri paylaşımını durdurabilir -> ilgili kutuyu işaretle.
+
+====================================================
+İÇERİK DERECELENDİRMESİ (Content rating)
+====================================================
+Play Console > App content > Content rating anketinde:
+- Şiddet, cinsellik, kumar vb. hiçbiri yok -> hepsine "Hayır" de.
+Sonuç muhtemelen "Everyone / 3+" çıkacaktır.
+
+====================================================
+HEDEF KİTLE (Target audience)
+====================================================
+"13 yaş ve üzeri" veya "Herkes" seçebilirsin; çocuklara yönelik
+olmadığı için "families policy" / çocuk uygulaması akışına girme.

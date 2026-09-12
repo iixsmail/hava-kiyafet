@@ -1,0 +1,19 @@
+{
+  "name": "hava-kiyafet-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hava & Kıyafet — Gemini proxy'si ve kredi sayacı",
+  "scripts": {
+    "dev": "node --watch src/index.ts",
+    "start": "node src/index.ts",
+    "test": "node tests/krediler.test.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^2.18.0",
+    "zod": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
