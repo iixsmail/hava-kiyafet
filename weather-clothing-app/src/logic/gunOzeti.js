@@ -132,7 +132,7 @@ export function yagisCumlesi(pencere) {
  */
 export function salinimCumlesi(profil) {
   if (!profil || profil.salinim < SALINIM_ESIGI) return null;
-  return `Öğleden sonra ${profil.enSicak.hissedilen}°'yi buluyor, katmanlı giyin.`;
+  return `Öğleden sonra ${profil.enSicak.hissedilen}°'yi buluyor, üstünü çıkarabileceğin şekilde giyin.`;
 }
 
 /**

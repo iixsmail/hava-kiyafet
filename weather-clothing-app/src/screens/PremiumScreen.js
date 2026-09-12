@@ -39,7 +39,7 @@ function karsilastirma(yapayZekaAcik) {
     { ikon: "🚫", ozellik: "Reklamsız deneyim", ucretsiz: "—", premium: "Var" },
     { ikon: "🧳", ozellik: "Bavul asistanı", ucretsiz: "—", premium: "Var" },
     { ikon: "💼", ozellik: "Etkinlik kombinleri", ucretsiz: "Günlük", premium: "4 mod" },
-    { ikon: "🌡️", ozellik: "Saatlik katman planı", ucretsiz: "—", premium: "Var" },
+    { ikon: "🌡️", ozellik: "Saat saat ne giymeli", ucretsiz: "—", premium: "Var" },
     { ikon: "👕", ozellik: "Gardırop kapasitesi", ucretsiz: "20 parça", premium: "Sınırsız" },
     // Bu iki uyarı ARTIK ÜCRETSİZ. Tabloda "—" bırakmak, kullanıcının
     // zaten sahip olduğu şeyi satmak olurdu.

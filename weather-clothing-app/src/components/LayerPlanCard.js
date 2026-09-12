@@ -73,7 +73,7 @@ export default function LayerPlanCard({ plan, theme, isPremium, onKilit }) {
           }}
           activeOpacity={0.85}
           accessibilityRole="button"
-          accessibilityLabel="Saatlik katman planını Premium ile aç"
+          accessibilityLabel="Saat saat giyinme planını Premium ile aç"
         >
           <Text style={styles.kilitIkon}>🔒</Text>
           <Text style={styles.kilitMetin}>

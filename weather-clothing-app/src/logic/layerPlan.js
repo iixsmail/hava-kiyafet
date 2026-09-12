@@ -96,7 +96,7 @@ export function katmanPlani(saatler) {
       saat: saatEtiketi(zirve.time),
       derece: Math.round(zirve.temp),
       eylem: "cikar",
-      metin: `${saatEtiketi(zirve.time)} civarı ${Math.round(zirve.temp)}°'ye çıkıyor — üst katmanı çıkarabilirsin.`,
+      metin: `${saatEtiketi(zirve.time)} civarı ${Math.round(zirve.temp)}°'ye çıkıyor — üstündekini çıkarabilirsin.`,
     });
     // Sonra tekrar düşüyorsa geri giymeyi hatırlat: sabah montu çıkarıp
     // akşam üşümek bu özelliğin çözmesi gereken asıl senaryo.
@@ -108,7 +108,7 @@ export function katmanPlani(saatler) {
         saat: saatEtiketi(dusus.time),
         derece: Math.round(dusus.temp),
         eylem: "ekle",
-        metin: `${saatEtiketi(dusus.time)} sonrası ${Math.round(dusus.temp)}°'ye düşüyor — katmanı yanında taşı.`,
+        metin: `${saatEtiketi(dusus.time)} sonrası ${Math.round(dusus.temp)}°'ye düşüyor — çıkardığını yanında taşı.`,
       });
     }
   } else {
@@ -120,7 +120,7 @@ export function katmanPlani(saatler) {
         saat: saatEtiketi(dusus.time),
         derece: Math.round(dusus.temp),
         eylem: "ekle",
-        metin: `${saatEtiketi(dusus.time)} civarı ${Math.round(dusus.temp)}°'ye düşüyor — yanına bir katman al.`,
+        metin: `${saatEtiketi(dusus.time)} civarı ${Math.round(dusus.temp)}°'ye düşüyor — yanına bir hırka al.`,
       });
     }
   }
@@ -141,7 +141,7 @@ export function katmanPlani(saatler) {
       saat: saatEtiketi(yagisBaslangic.time),
       derece: Math.round(yagisBaslangic.temp),
       eylem: "yagis",
-      metin: `${saatEtiketi(yagisBaslangic.time)} civarı yağış bekleniyor — şemsiye veya su geçirmez katman.`,
+      metin: `${saatEtiketi(yagisBaslangic.time)} civarı yağış bekleniyor — şemsiye ya da su geçirmez bir mont.`,
     });
   }
 
@@ -234,7 +234,7 @@ export function bavulListesi(gunler, parcalar = []) {
   if (enYuksek >= 26) ekstralar.push("Güneş kremi ve gözlük");
   if (enDusuk <= 5) ekstralar.push("Atkı, bere, eldiven");
   if (enYuksek - enDusuk >= 12) {
-    ekstralar.push(`Gün içi fark ${Math.round(enYuksek - enDusuk)}° — katmanlı giyin`);
+    ekstralar.push(`Gün içi fark ${Math.round(enYuksek - enDusuk)}° — çıkarıp giyebileceğin bir şey seç`);
   }
 
   return {

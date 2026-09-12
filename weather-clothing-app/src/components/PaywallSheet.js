@@ -33,9 +33,9 @@ export const KILITLI_OZELLIKLER = {
   },
   katman: {
     ikon: "🌡️",
-    baslik: "Saatlik katman planı",
+    baslik: "Saat saat ne giymeli",
     metin:
-      "Gün içinde sıcaklık çok değişiyorsa ne zaman katman çıkarıp ne zaman geri giyeceğini saat saat söyler.",
+      "Gün içinde sıcaklık çok değişiyorsa ne zaman üstünü çıkarıp ne zaman tekrar giyeceğini saat saat söyler.",
     // Yağış ve soğuma uyarıları ücretsize açıldı; paywall'da vaat etmek
     // artık yanıltıcı olurdu.
     faydalar: ["Saatlik çizelge", "10 günlük tam tahmin", "Gardırobundan kombin"],

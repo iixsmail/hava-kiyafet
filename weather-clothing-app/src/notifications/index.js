@@ -53,12 +53,17 @@ if (N?.setNotificationHandler) {
   }
 }
 
-export const AYAR_ANAHTARI = "bildirimAyarlari.v1";
-
+export const AYAR_ANAHTARI = "bildirimAyarlari.v2";
+// v1'den taşınıyoruz: test kullanıcıları sabah özetinin 08:00'de çok geç
+// geldiğini, çıkmadan önce göremediklerini bildirdi. Varsayılanı 06:00'ya
+// çektik. Anahtarı sürümlemek şart: yalnızca varsayılanı değiştirseydik
+// ayarı bir kez kaydetmiş olan mevcut kullanıcılar 08:00'de kalırdı.
+const ESKI_AYAR_ANAHTARI = "bildirimAyarlari.v1";
+const ESKI_VARSAYILAN_SAAT = 8;
 
 export const VARSAYILAN_AYARLAR = {
   sabahAcik: true,
-  sabahSaat: 8,
+  sabahSaat: 6,
   sabahDakika: 0,
   yagisUyarisi: true,
   sicaklikUyarisi: true,
@@ -76,7 +81,22 @@ export function bildirimVarMi() {
 export async function ayarlariOku() {
   try {
     const ham = await AsyncStorage.getItem(AYAR_ANAHTARI);
-    return ham ? { ...VARSAYILAN_AYARLAR, ...JSON.parse(ham) } : { ...VARSAYILAN_AYARLAR };
+    if (ham) return { ...VARSAYILAN_AYARLAR, ...JSON.parse(ham) };
+
+    // v1 -> v2 göçü. Kullanıcı saati BİLEREK değiştirdiyse ona dokunmuyoruz;
+    // yalnızca eski varsayılanda (08:00) kalmış olanları 06:00'ya alıyoruz.
+    const eskiHam = await AsyncStorage.getItem(ESKI_AYAR_ANAHTARI);
+    if (eskiHam) {
+      const eski = { ...VARSAYILAN_AYARLAR, ...JSON.parse(eskiHam) };
+      if (eski.sabahSaat === ESKI_VARSAYILAN_SAAT && eski.sabahDakika === 0) {
+        eski.sabahSaat = VARSAYILAN_AYARLAR.sabahSaat;
+      }
+      await AsyncStorage.setItem(AYAR_ANAHTARI, JSON.stringify(eski));
+      await AsyncStorage.removeItem(ESKI_AYAR_ANAHTARI);
+      return eski;
+    }
+
+    return { ...VARSAYILAN_AYARLAR };
   } catch {
     return { ...VARSAYILAN_AYARLAR };
   }
@@ -380,7 +400,7 @@ export async function yenidenPlanla({ ayarlar, weatherData, kombin, premium = fa
  * uydurma olduğunu anlıyor ve asıl sorusunun ("bana ne gönderileceksiniz?")
  * cevabını alamıyordu. Veri yoksa örnek metne düşüyoruz.
  */
-export async function ornekGonder({ weatherData, kombin, sabahSaat = 8 } = {}) {
+export async function ornekGonder({ weatherData, kombin, sabahSaat = 6 } = {}) {
   if (!N) return false;
   await kanallariKur();
 

@@ -268,7 +268,7 @@ function PremiumOnizleme({ planlar, varsayilan, yapayZekaAcik }) {
   const avantajlar = [
     "Reklamsız kullanım",
     "10 günlük tahminin tamamı",
-    "Saatlik katman planı",
+    "Saat saat ne giymeli",
     ...(yapayZekaAcik ? ["Günde 20 yapay zeka kombini"] : ["Tüm kıyafet önerileri"]),
   ];
 

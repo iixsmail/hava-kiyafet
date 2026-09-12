@@ -175,7 +175,7 @@ export default function TagConfirmModal({ gorunur, parca, gorselUri, elleEtiket,
             </View>
 
             <Secenekler
-              baslik="KATMAN"
+              baslik="PARÇA GRUBU"
               secenekler={KATMANLAR}
               secili={taslak.katman}
               onSec={(v) => guncelle({ katman: v })}

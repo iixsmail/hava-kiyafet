@@ -530,7 +530,7 @@ export default function HomeScreen({
                   ? "Reklamsız kullanım, 10 günlük tahmin ve yapay zeka kombin asistanı"
                   // Yağış uyarıları ÜCRETSİZ oldu; burada Premium avantajı
                   // diye saymak kullanıcının zaten sahip olduğunu satmaktı.
-                  : "Reklamsız kullanım, 10 günlük tahmin ve saatlik katman planı"}
+                  : "Reklamsız kullanım, 10 günlük tahmin ve saat saat giyinme planı"}
               </Text>
             </TouchableOpacity>
           </>

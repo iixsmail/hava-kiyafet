@@ -208,9 +208,9 @@ function gerekce(parca, hissedilen, yagisli) {
 
 function baslikUret(hissedilen, yagisli, kod) {
   if (STORM_CODES.has(kod)) return "Fırtınalı bir gün, sağlam giyin.";
-  if (SNOW_CODES.has(kod)) return "Kar var, sıcak tutan katmanlar şart.";
+  if (SNOW_CODES.has(kod)) return "Kar var, kalın ve sıcak tutan parçalar şart.";
   if (yagisli) return "Yağış var, su geçirmez tarafı seç.";
-  if (hissedilen <= 5) return "Soğuk bir gün, katman katman giyin.";
+  if (hissedilen <= 5) return "Soğuk bir gün, üst üste giyin.";
   if (hissedilen <= 14) return "Serin bir gün, üstüne bir şey al.";
   if (hissedilen <= 24) return "Ilıman bir gün, rahat bir kombin yeter.";
   return "Sıcak bir gün, hafif ve nefes alan kumaşlar.";
