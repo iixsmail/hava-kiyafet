@@ -1,7 +1,30 @@
 # PROJECT_STATE — Hava & Kıyafet
 
-**Son güncelleme:** 13 Eylül 2026
-**Durum:** Kapalı test tamamlandı, üretim erişimi başvurusu gönderilmeyi bekliyor.
+**Son güncelleme:** 13 Eylül 2026, gece
+**Durum:** v30 Google incelemesinde. Üretim başvurusu taslak olarak hazır,
+GÖNDERİLMEDİ (bilerek — aşağıyı oku).
+
+---
+
+## 0. YARIN İLK İŞ
+
+1. **Play Console → Test etme → Kapalı test → Sürümler**
+   v30'un durumuna bak.
+   - "İncelenmekte" ise → bekle
+   - **"Kullanılabilir"** ise → 2. adıma geç
+
+2. **Üretim başvurusunu gönder.** Form tamamen doldurulmuş ve taslak olarak
+   duruyor; sadece **Uygula**'ya basman yeterli.
+   Neden bekletildi: yanıtlarda "v30'u testçilere yeniden dağıttım" yazıyor.
+   Sürüm yayına girmeden göndermek, beyanı bir adım öne almak olurdu.
+   Hesap bir kez reddedildiği için bu detay önemli.
+
+3. **⚠️ 30 Eylül 2026 — Android geliştirici doğrulaması.**
+   Başvurudan TAMAMEN BAĞIMSIZ sert son tarih. Kaydolunmazsa uygulama
+   dünya genelinde Play'den kaldırılır. Kimlik doğrulama gerektirdiği için
+   bunu yalnızca sen yapabilirsin.
+
+4. Testçilere haber ver: bildirim saati 06.00'ya alındı, güncelleme geldi.
 
 ---
 
